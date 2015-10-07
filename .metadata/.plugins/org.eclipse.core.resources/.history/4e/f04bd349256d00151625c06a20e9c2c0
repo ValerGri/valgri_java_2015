@@ -25,7 +25,7 @@ do
 		System.out.println(" " + array[index]);
 	else
 	{
-		long bufer=array[index];
+		int bufer=array[index];
 		array[index]=array[index]*array[index-2];
 		System.out.println(" " + array[index]);
 		array[index]=bufer;//reset

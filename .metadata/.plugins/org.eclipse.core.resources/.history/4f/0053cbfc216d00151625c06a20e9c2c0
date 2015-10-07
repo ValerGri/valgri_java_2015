@@ -1,0 +1,19 @@
+package by.epam.grodno.trainig.val.gri.se01;
+
+public class SE01c2 {
+	public static void main(String args []){
+int array [];
+	int index=0;	
+array = new int[20];
+while (index <20)
+{
+for (int value=10; value<=50; value=value+2) //цикл-генератор чисел для записи
+{
+	array[index]=value;
+	System.out.println(" " + array[index]);
+
+	}
+index++;
+	}
+}
+}

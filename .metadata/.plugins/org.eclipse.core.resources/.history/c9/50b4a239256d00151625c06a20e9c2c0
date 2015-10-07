@@ -25,12 +25,11 @@ do
 		System.out.println(" " + array[index]);
 	else
 	{
-		long bufer=array[index];
 		array[index]=array[index]*array[index-2];
 		System.out.println(" " + array[index]);
-		array[index]=bufer;//reset
+		array[index]=array[index];//reset
 	}
-	index=index+2;
+	index++;
 	} while (index <20);
 	
 
