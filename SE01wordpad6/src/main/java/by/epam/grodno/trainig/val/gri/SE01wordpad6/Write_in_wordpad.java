@@ -21,14 +21,27 @@ public class Write_in_wordpad {
 	
 	while (buf<i)
 	{
-		System.out.println("s" +wordpad.View(buf));	
+		System.out.println("Запись номер " +buf);
+		System.out.println("" +wordpad.View(buf));
+		
 		buf++;
 		
 	}
-	buf=0; // reset
+	
+	}
+	public void Delete (int i)
+	{
+		String str=null;
+		wordpad.create(str, i);
 	}
 
-
+	public void Edit (String str,int i)
+	{
+		
+		wordpad.create(str, i);
+	}
+	
+	
 	public static void main(String[] args) {
 		Write_in_wordpad write_in_wordpad =new Write_in_wordpad();
 		
@@ -54,15 +67,26 @@ if (comand== 1)
 if (comand== 2)
 {
 	System.out.println(" Удаление записи ");
+	System.out.println(" Введите номер удаляемой записи ");
+	int num=in.nextInt();
+	write_in_wordpad.Delete(num);
+	count--;
 }
 if (comand== 3)
 {
 	System.out.println(" Редактирование записи ");
+	System.out.println(" Введите номер редактируемой записи ");
+	int num=in.nextInt();
+	System.out.println(" Введите текст ");
+	String st = in.next();
+	write_in_wordpad.Edit(st, num);
+	count--;
 }
 if (comand== 4)
 {
 	System.out.println(" Просмотр всех записей " );
 	write_in_wordpad.view_all( i );
+	
 	count--;
 }
 
