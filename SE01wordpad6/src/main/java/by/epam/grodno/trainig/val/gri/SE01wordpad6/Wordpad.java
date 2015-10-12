@@ -29,7 +29,7 @@ public class Wordpad {
 	 * @param number
 	 * @return
 	 */
-	public String View(int number) {
+	public String view(int number) {
 		return s[number];
 	}
 

@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package by.epam.grodno.trainig.val.gri.SE01wordpad6;
+
+/**
+ * @author Gri
+ *
+ */
+public class Wordpad {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

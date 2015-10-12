@@ -32,6 +32,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\JT\valgri_java_2015\se01"/>
 			<item value="D:\JT\valgri_java_2015"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -45,12 +46,15 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="by.epam.grodno.trainig.val.gri.SE01wordpad6"/>
+			<item value="by.epam.grodno.trainig.val.gri"/>
 			<item value="by.epam.grodno.trainig.val.gri.se01"/>
 		</list>
 		<list key="groupId">
 			<item value="by.epam.grodno.trainig.2015.val.gri"/>
 		</list>
 		<list key="artifactId">
+			<item value="SE01wordpad6"/>
 			<item value="se01"/>
 		</list>
 		<list key="projectNameTemplate">
