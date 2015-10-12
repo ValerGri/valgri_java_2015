@@ -6,23 +6,31 @@ package by.epam.grodno.trainig.val.gri.SE01wordpad6;
 /**
  * @author Gri
  * 
- * @ импорт класса для консольного ввода информации
+ * 
  * 
  *
  */
 
 public class Wordpad {
-	String[] s = new String[ 10];
-	public void  create (String string, int number){
-		
-		s[number]=string;
-		
-		}
-	public String View (int number){
+	String[] s = new String[10]; 
+/**
+ * Метод создающий запись
+ * @param string
+ * @param number
+ */
+	public void create(String string, int number) {
+
+		s[number] = string;
+
+	}
+
+	/**
+	 * Метод, возвращающий запись под номером number
+	 * @param number
+	 * @return
+	 */
+	public String View(int number) {
 		return s[number];
 	}
-	
-	/**
-	 * @param args
-	 */
+
 }
