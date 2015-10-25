@@ -1,0 +1,24 @@
+package by.epam.grodno.trainig.val.gri.se02;
+import java.util.ArrayList;
+
+import by.epam.grodno.trainig.val.gri.se02.Stationery;
+public class Collection {
+	public static void main(String[] args) {
+	 ArrayList<Object> users = new ArrayList<Object>();
+	 Stationery st=new Stationery(5, "",6);
+	 users.add(st);
+	 Paper p=new Paper(5, "",6, 7);
+	 users.add(p);
+ Paperclip pclip =new Paperclip(5,"Большая", 7,8,10);
+ users.add(pclip);
+ public class CollectionComparator  implements Comparator <Collection>
+ {
+	 
+ }
+ 
+	 
+	}
+	 }
+	 
+	 
+

@@ -1,0 +1,33 @@
+package by.epam.grodno.trainig.val.gri.se02;
+import java.util.TreeSet;
+import java.util.Comparator;
+import java.util.Iterator;
+
+import by.epam.grodno.trainig.val.gri.se02.Stationery;
+public class Collection implements Comparator <Object> {
+	public int compare(Object o1, Object o2) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	public static void main(String[] args) {
+		Collection sortcol =new Collection();
+		TreeSet<Object> users = new TreeSet<Object>(sortcol);
+		
+		 users.add(new Stationery(100, "xvc", 6));
+		 users.add(new Paper(5, "",6, 7));
+		 users.add(new Paperclip(5,"Большая", 7,8,10));
+		 
+	
+	 
+	}
+
+	
+
+	
+
+	
+	 }
+	 
+	 
+
