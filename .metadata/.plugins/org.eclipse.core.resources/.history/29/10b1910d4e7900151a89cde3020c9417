@@ -1,0 +1,68 @@
+package by.epam.grodno.trainig.val.gri.se02;
+
+/**
+ * @author Gri
+ *
+ */
+public class Stationery {
+	private int price;
+	private String type;
+	private int weigh;
+	
+	public Stationery(int price,String type, int weigh )
+	{
+		this.price=price;
+		this.type=type;
+		this.weigh=weigh;
+	}
+	
+	
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public int getWeigh() {
+		return weigh;
+	}
+	public void setWeigh(int weigh) {
+		this.weigh = weigh;
+	}
+	
+	
+	
+	public class Paperclip extends Stationery {
+		private int quantityOfPaperclip;
+		private int sizeOfPaperclip;
+		public Paperclip(int price,String type, int weigh, int quantity, int sizeOfPaperclip, int quantityOfPaperclip )
+		{
+			super(price,type, weigh );
+			this.quantityOfPaperclip=quantityOfPaperclip;
+			this.sizeOfPaperclip=sizeOfPaperclip;
+			
+		}
+		public int getQuantityOfPaperclip() {
+			return quantityOfPaperclip;
+		}
+		public void setQuantityOfPaperclip(int quantityOfPaperclip) {
+			this.quantityOfPaperclip = quantityOfPaperclip;
+		}
+		public int getSizeOfPaperclip() {
+			return sizeOfPaperclip;
+		}
+		public void setSizeOfPaperclip(int sizeOfPaperclip) {
+			this.sizeOfPaperclip = sizeOfPaperclip;
+		}
+		
+	}
+	
+	
+}
+	

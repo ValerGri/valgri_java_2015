@@ -1,0 +1,62 @@
+/**
+ * 
+ */
+package by.epam.grodno.trainig.val.gri.se02;
+
+/**
+ * @author Gri
+ *
+ * 
+ */
+public class SE02Pen {
+	private int diametr=3;
+	private int heigh=1;
+	private boolean work=true; // заточен ли карандаш
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + diametr;
+		result = prime * result + heigh;
+		result = prime * result + (work ? 1231 : 1237);
+		return result;
+	}
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		SE02Pen other = (SE02Pen) obj;
+		if (diametr != other.diametr)
+			return false;
+		if (heigh != other.heigh)
+			return false;
+		if (work != other.work)
+			return false;
+		return true;
+	}
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "SE02Pen [diametr=" + diametr + ", heigh=" + heigh + ", work=" + work + "]";
+	}
+	/**
+	 * Этот метод возвращает значение диаметра карандаша
+	 * @return
+	 */
+	private int getDiametr() {
+		return diametr;
+	}
+
+}

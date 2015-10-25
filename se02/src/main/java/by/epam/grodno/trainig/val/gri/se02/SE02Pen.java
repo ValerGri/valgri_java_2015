@@ -1,0 +1,107 @@
+/**
+ * 
+ */
+package by.epam.grodno.trainig.val.gri.se02;
+
+/**
+ * @author Gri
+ *
+ * 
+ */
+public class SE02Pen extends Stationery {
+	private int diametr = 3;
+	private int heigh = 1;
+	private boolean work; // заточен ли карандаш
+	private int quantityOfpen;
+	private int totalpriceOfpen;
+
+	public SE02Pen(int price, String type, int weigh,  boolean work, int quantityOfpen) {
+		super(price, type, weigh);
+		this.work = work;
+		this.quantityOfpen = quantityOfpen;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + diametr;
+		result = prime * result + heigh;
+		result = prime * result + (work ? 1231 : 1237);
+		return result;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		SE02Pen other = (SE02Pen) obj;
+		if (diametr != other.diametr)
+			return false;
+		if (heigh != other.heigh)
+			return false;
+		if (work != other.work)
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "SE02Pen [diametr=" + diametr + ", heigh=" + heigh + ", work=" + work + "]";
+	}
+
+	/**
+	 * Этот метод возвращает значение диаметра карандаша
+	 * 
+	 * @return
+	 */
+	private int getDiametr() {
+		return diametr;
+	}
+
+	/**
+	 * Этот метод возвращает значение длинны карандаша
+	 * 
+	 * @return
+	 */
+	private int getHeigh() {
+		return heigh;
+	}
+
+	/**
+	 * Этот метод возвращает булевое значение заточен ли карандаш
+	 * 
+	 * @return
+	 */
+	private boolean getWork() {
+		return work;
+	}
+
+	public int getQuantityOfpen() {
+		return quantityOfpen;
+	}
+
+	public int getTotalpriceOfpen() {
+		totalpriceOfpen = quantityOfpen * super.getPrice();
+		return totalpriceOfpen;
+	}
+
+	public void setQuantityOfpen(int quantityOfpen) {
+		this.quantityOfpen = quantityOfpen;
+	}
+
+}

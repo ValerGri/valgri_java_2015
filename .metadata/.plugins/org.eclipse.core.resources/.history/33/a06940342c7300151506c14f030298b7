@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+package by.epam.grodno.trainig.val.gri.se02;
+
+/**
+ * @author Gri
+ *
+ */
+public class SE02task1 {
+	int a;
+	int b;
+	
+
+}

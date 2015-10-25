@@ -1,0 +1,37 @@
+/**
+ * 
+ */
+package by.epam.grodno.trainig.val.gri.se02;
+
+/**
+ * @author Gri
+ *
+ */
+public class Paperclip extends Stationery {
+	private int priceOfSmall=10;
+	private int priceOfBig=50;
+	private double weightOfSmall=0.01d;
+	private double weightOfBig=0.05d;
+
+	public int getpriceOfSmall() {
+		return priceOfSmall;
+	}
+
+	public double getWeightOfSmall() {
+		return weightOfSmall;
+	}
+
+	public double getWeightOfBig() {
+		return weightOfBig;
+	}
+
+	public int getPriceOfSmall() {
+		return priceOfSmall;
+	}
+
+	public int getPriceOfBig() {
+		return priceOfBig;
+	}
+	
+
+}

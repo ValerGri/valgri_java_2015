@@ -1,0 +1,9 @@
+package by.epam.grodno.trainig.val.gri.se02;
+
+/**
+ * @author Gri
+ *
+ */
+abstract class Stationery {
+
+}

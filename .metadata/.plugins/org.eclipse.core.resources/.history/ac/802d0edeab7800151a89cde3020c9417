@@ -1,0 +1,7 @@
+package by.epam.grodno.trainig.val.gri.se02;
+import java.util.ArrayList;
+public class Collection {
+	 ArrayList<Object> users = new ArrayList<Object>();
+	 users.
+	 
+}

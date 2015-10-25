@@ -1,0 +1,15 @@
+package by.epam.grodno.trainig.val.gri.se02;
+
+/**
+ * @author Gri
+ *
+ */
+public class Paper extends Stationery {
+private int price;
+
+public int getPrice() {
+	return price;
+}
+
+	
+}

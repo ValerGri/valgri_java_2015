@@ -1,0 +1,14 @@
+package by.epam.grodno.trainig.val.gri.se02;
+import java.util.ArrayList;
+import by.epam.grodno.trainig.val.gri.se02.User;
+public class Collection {
+	public static void main(String[] args) {
+	 ArrayList<Object> users = new ArrayList<Object>();
+	 users.add(user);
+	 
+	 
+	}
+	 }
+	 
+	 
+

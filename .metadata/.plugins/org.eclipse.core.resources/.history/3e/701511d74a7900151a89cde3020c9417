@@ -1,0 +1,23 @@
+package by.epam.grodno.trainig.val.gri.se02;
+
+
+import by.epam.grodno.trainig.val.gri.se02.Stationery;
+public class User  {
+private	int quantityPaper;
+private	int quantityPen;
+private	int quantityPaperclip;
+public static void main(String[] args) {
+Stationery st =new Stationery(5," ",4);
+
+
+	Paper p1 = new Paper(10, " Ofice", 8, 4);
+	
+	
+	
+	
+}
+
+
+
+
+}
