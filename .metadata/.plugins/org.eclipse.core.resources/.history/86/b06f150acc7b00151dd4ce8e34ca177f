@@ -1,0 +1,41 @@
+package by.epam.grodno.trainig.val.gri.se03;
+import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class CrazzyLogger {
+	
+	
+	public void mydate(String message)
+    {
+        Date datenow = new Date();
+        SimpleDateFormat format1 = new SimpleDateFormat("dd.MM.yyyy hh:mm");
+        StringBuilder sb = new StringBuilder(100);
+        sb.append(format1.format(datenow));
+        sb.append(message);
+      String log=  sb.toString();
+        try(FileWriter writer = new FileWriter("D:\\se03.txt", true))
+        {
+        	 writer.append('-');
+            writer.write(log);
+           
+            // запись по символам
+            writer.append('\n');
+        }
+        catch(IOException ex){
+            
+            System.out.println(ex.getMessage());
+        } 
+    }
+	
+	
+	 public static void main(String[] args) {
+		 
+		 CrazzyLogger cl=new CrazzyLogger();
+		 cl.mydate("Первое сообщение");
+		 
+		
+	    } 
+	
+	
+}

@@ -8,5 +8,11 @@ public class Students {
 		this.name=name;
 		this.secondname=secondname;
 	}
+	public String getName() {
+		return name;
+	}
+	public String getSecondname() {
+		return secondname;
+	}
 
 }

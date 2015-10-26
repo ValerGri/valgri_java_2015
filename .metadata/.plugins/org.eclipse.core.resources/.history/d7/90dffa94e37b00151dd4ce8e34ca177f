@@ -1,0 +1,118 @@
+package by.epam.grodno.trainig.val.gri.se03;
+import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+
+public class CrazzyLogger {
+	
+	
+	public void mydateLog(String message)
+    {
+        Date datenow = new Date();
+        SimpleDateFormat format1 = new SimpleDateFormat("dd.MM.yyyy hh:mm");
+        StringBuilder sb = new StringBuilder(100);
+        sb.append(format1.format(datenow));
+        sb.append(" ");
+        sb.append(message);
+        sb.append(";");
+        sb.append("\r");
+      String log=  sb.toString();
+        try(FileWriter writer = new FileWriter("D:\\se03.txt", true))
+        {
+        	
+            writer.write(log);
+           
+            
+            writer.append('\n');
+        }
+        catch(IOException ex){
+            
+            System.out.println(ex.getMessage());
+        } 
+    }
+	
+	public String readFile(String dir){
+ 
+		 StringBuilder sbr = new StringBuilder(1000);
+        try(FileReader reader = new FileReader(dir))
+        {
+           // посимвольное чтение
+            int c;
+            while((c=reader.read())!=-1){
+                 
+            	sbr.append((char)c);
+            	
+            } 
+           
+        }
+        
+        
+        
+        catch(IOException ex){
+             
+            System.out.println(ex.getMessage());
+        }
+        String result =sbr.toString();
+        return result;
+
+	}
+	
+	public String founndOnFile(String dir, String found){
+		 
+		 StringBuilder sbr = new StringBuilder(100);
+       try(FileReader reader = new FileReader(dir))
+       {
+          // посимвольное чтение
+           int c;
+           while((c=reader.read())!=-1){
+            
+            	  
+           	sbr.append((char)c);
+           	
+           } 
+          
+       }
+       
+       
+       
+       catch(IOException ex){
+            
+           System.out.println(ex.getMessage());
+       }
+       String result =sbr.toString();
+       int indexBegin = result.indexOf(found); 
+       // поиск конца записи
+       int indexEND = result.indexOf(";", indexBegin);
+       String foundresult =result.substring(indexBegin, indexEND+1);
+       return foundresult;
+
+	}
+	
+	
+	
+	
+	 public static void main(String[] args) {
+		 int n=0;
+		 CrazzyLogger cl=new CrazzyLogger();
+		 Scanner in = new Scanner(System.in);
+		 while ( n<10)
+		 {
+		 
+		 cl.mydateLog("сообщение"+n);
+		 n++;
+		 }
+		System.out.println(cl.readFile("D:\\se03.txt"));
+		System.out.println(" Введите дату записи в журнале в формате dd.MM.yyyy hh:mm ");
+		String st = in.next();
+		System.out.println(cl.founndOnFile("D:\\se03.txt", st));
+		
+		
+		
+	    }
+	 
+	 
+}
+	
+	
+
