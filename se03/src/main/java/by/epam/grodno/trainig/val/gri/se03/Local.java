@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class Local {
 	public static void main(String[] args) {
-		
+
 		Scanner in = new Scanner(System.in);
 		System.out.println("Выберите язык");
 		System.out.println("1 – Английский");
@@ -30,7 +30,7 @@ public class Local {
 		}
 		Locale current = new Locale(language, country);
 
-		ResourceBundle rb =ResourceBundle.getBundle("text", current);
+		ResourceBundle rb = ResourceBundle.getBundle("by.epam.grodno.trainig.val.gri.se03.text", current);
 		try {
 
 			String st = rb.getString("str1");
@@ -38,7 +38,7 @@ public class Local {
 			String s1 =
 
 			new String(st.getBytes("ISO-8859-1"), "UTF-8");
-
+			System.out.println("1");
 			System.out.println(s1);
 
 			st = rb.getString("str2");
@@ -47,14 +47,43 @@ public class Local {
 
 			new String(st.getBytes("ISO-8859-1"), "UTF-8");
 
+			System.out.println("2");
 			System.out.println(s2);
+			st = rb.getString("str3");
 
-			} catch (UnsupportedEncodingException e) {
+			String s3 =
+
+			new String(st.getBytes("ISO-8859-1"), "UTF-8");
+
+			System.out.println("3");
+			System.out.println(s3);
+			int langanswear = in.nextInt();
+			switch (langanswear) {
+			case 1:
+				st = rb.getString("str4");
+
+				String s4 = new String(st.getBytes("ISO-8859-1"), "UTF-8");
+				System.out.println(s4);
+				break;
+			case 2: st = rb.getString("str5");
+
+			String s5 = new String(st.getBytes("ISO-8859-1"), "UTF-8");
+			System.out.println(s5);	
+			break;
+			case 3: st = rb.getString("str6");
+
+			String s6 = new String(st.getBytes("ISO-8859-1"), "UTF-8");
+			System.out.println(s6);
+			break;
+
+			}
+
+		} catch (UnsupportedEncodingException e) {
 
 			e.printStackTrace();
 
-			}
+		}
 
-			}
-	
+	}
+
 }
